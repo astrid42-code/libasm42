@@ -1,0 +1,74 @@
+retirer le dossier srcs et modifier le makefile en fct
+pb a la compil du main dans l'appel de la fct ft_strlen 
+
+
+http://www.lacl.fr/tan/asm
+Intro 
+Registres Instructions Structures de contrˆole Tableaux Sous programmes Flottants
+Les principaux registres 64 bits
+rax registre g´en´eral, accumulateur, contient la valeur de retour des fonctions
+rbx registre g´en´eral
+rcx registre g´en´eral, compteur de boucle
+rdx registre g´en´eral, partie haute d’une valeur 128 bits
+rsi registre g´en´eral, adresse source pour d´eplacement ou comparaison
+rdi registre g´en´eral, adresse destination pour d´eplacement ou comparaison
+rsp registre g´en´eral, pointeur de pile (stack pointer)
+rbp registre g´en´eral, pointeur de base (base pointer)
+r8 registre g´en´eral
+r9 registre g´en´eral
+...
+r15 registre g´en´eral
+rip compteur de programme (instruction pointer)
+
+
+instruction loop :
+Cette instruction de boucle permet de décrémenter le registre CX (compteur de boucle) de 1
+et par la suite de donner le contrôle à une étiquette destinataire tant que le registre CX ne vaut pas 0.
+https://www.gladir.com/LEXIQUE/ASM/loop.htm
+
+
+IA explications pour ce code :
+section .text
+		global ft_strlen
+
+ft_strlen:
+		push rbp
+		mov rbp, rsp
+		xor rcx, rcx
+
+_loop:
+		cmp [rdi], byte 0
+		jz _end
+		inc rcx
+		inc rdi
+		jmp _loop
+        
+_end:
+		mov rax, rcx
+		pop rbp
+		ret
+
+>
+section .text
+    global ft_strlen
+
+ft_strlen:
+    push rbp              ; Sauvegarde la valeur de rbp sur la pile (préparation pour un appel de fonction)
+    mov rbp, rsp          ; Restaure rbp avec la valeur de rsp (préparation du cadre de pile)
+    xor rcx, rcx          ; Met rcx à zéro. rcx va être utilisé pour compter la longueur de la chaîne
+
+Les premières lignes préparent l'environnement d'exécution de la fonction en sauvegardant le registre rbp et en initialisant rcx à 0. Ce registre rcx sera utilisé comme un compteur pour la longueur de la chaîne.
+
+_loop:
+    cmp [rdi], byte 0     ; Compare la valeur à l'adresse pointée par rdi (le caractère actuel) avec 0 (fin de chaîne)
+    jz _end               ; Si le caractère est 0 (fin de chaîne), saute à _end
+    inc rcx               ; Si le caractère n'est pas 0, incrémente rcx (compteur de la longueur)
+    inc rdi               ; Avance au caractère suivant (incrémente le pointeur de la chaîne)
+    jmp _loop             ; Retourne au début de la boucle pour comparer le caractère suivant
+
+_end:
+    mov rax, rcx          ; Met la valeur de rcx dans rax (retourne la longueur de la chaîne)
+    pop rbp               ; Restaure rbp (retour à l'état précédent avant l'appel de fonction)
+    ret                   ; Retour de la fonction
+
+La fonction utilise une boucle pour parcourir chaque caractère de la chaîne pointée par le registre rdi. La chaîne est terminée par un \0 (caractère nul), ce qui est la convention en C pour délimiter une chaîne de caractères.
