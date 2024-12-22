@@ -1,7 +1,7 @@
 retirer le dossier srcs et modifier le makefile en fct
 pb a la compil du main dans l'appel de la fct ft_strlen > resolu
 a.out ne disparait pas apres make fclean
-
+rbp / rsp a revoir
 
 
 http://www.lacl.fr/tan/asm
