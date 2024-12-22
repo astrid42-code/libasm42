@@ -1,5 +1,7 @@
 retirer le dossier srcs et modifier le makefile en fct
-pb a la compil du main dans l'appel de la fct ft_strlen 
+pb a la compil du main dans l'appel de la fct ft_strlen > resolu
+a.out ne disparait pas apres make fclean
+
 
 
 http://www.lacl.fr/tan/asm
@@ -72,3 +74,17 @@ _end:
     ret                   ; Retour de la fonction
 
 La fonction utilise une boucle pour parcourir chaque caractère de la chaîne pointée par le registre rdi. La chaîne est terminée par un \0 (caractère nul), ce qui est la convention en C pour délimiter une chaîne de caractères.
+
+En C, cela ressemble à une fonction qui compte les caractères d'une chaîne de caractères jusqu'à rencontrer le caractère nul \0 :
+
+#include <stddef.h>
+
+size_t ft_strlen(const char *str) {
+    size_t length = 0;
+    
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    return length;
+}
