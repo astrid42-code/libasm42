@@ -13,7 +13,7 @@ OBJS		=	${addprefix ${PATH_SRCS}, ${SRCS:.s=.o}}
 
 CC			=	nasm
 RM			=	rm -f
-ASMFLAGS	=	-f elf64
+ASMFLAGS	=	-f macho64 # elf64
 # flag linux -f elf64
 # flag mac -f macho64
 
