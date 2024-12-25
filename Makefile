@@ -1,7 +1,7 @@
 NAME		=	libasm.a
 
-SRCS		=	ft_strlen.s 
-#ft_strcpy.s ft_strcmp.s ft_strdup.s ft_write.s ft_read.s
+SRCS		=	ft_strlen.s ft_strcpy.s 
+# ft_strcmp.s ft_strdup.s ft_write.s ft_read.s
 
 #BONUS		=	
 
@@ -13,7 +13,7 @@ OBJS		=	${addprefix ${PATH_SRCS}, ${SRCS:.s=.o}}
 
 CC			=	nasm
 RM			=	rm -f
-ASMFLAGS	=	-f macho64 # elf64
+ASMFLAGS	=	-f elf64
 # flag linux -f elf64
 # flag mac -f macho64
 

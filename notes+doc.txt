@@ -29,27 +29,7 @@ et par la suite de donner le contrôle à une étiquette destinataire tant que l
 https://www.gladir.com/LEXIQUE/ASM/loop.htm
 
 
-IA explications pour ce code :
-section .text
-		global ft_strlen
-
-ft_strlen:
-		push rbp
-		mov rbp, rsp
-		xor rcx, rcx
-
-_loop:
-		cmp [rdi], byte 0
-		jz _end
-		inc rcx
-		inc rdi
-		jmp _loop
-        
-_end:
-		mov rax, rcx
-		pop rbp
-		ret
-
+exempl d'explications IA
 >
 section .text
     global ft_strlen

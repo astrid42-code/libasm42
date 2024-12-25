@@ -6,7 +6,7 @@
 /*   By: asgaulti <asgaulti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:30:32 by asgaulti          #+#    #+#             */
-/*   Updated: 2024/12/22 16:48:55 by asgaulti         ###   ########.fr       */
+/*   Updated: 2024/12/25 17:58:13 by asgaulti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,46 @@ void		ft_main_strlen(void)
 	printf("%zd\n", strlen("zzzzzzzzzzzzzzzzzzzzzzzz hey\n"));
 }
 
+void		ft_main_strcpy(void)
+{
+	char	str1[] = "Hello";
+	char	str2[] = "world";
+	char	str3[] = "wesh";
+	char	str4[] = " ";
+	char	str5[] = "";
+	char	str6[] = "42";
+	char	str7[] = "libasm";
+	printf("-------------------ft_strcpy-------------------\n");
+	printf("ft_strcpy : \n");
+	printf("%s\n", ft_strcpy(str1, str2));
+	printf("strcpy : \n");
+	printf("%s\n", strcpy(str1, str2));
+	printf("----------\n");
+	printf("ft_strcpy : \n");
+	printf("%s\n", ft_strcpy(str3, str4));
+	printf("strcpy : \n");
+	printf("%s\n", strcpy(str3, str4));
+	printf("----------\n");
+	printf("ft_strcpy : \n");
+	printf("%s\n", ft_strcpy(str5, str6));
+	printf("strcpy : \n");
+	printf("%s\n", strcpy(str5, str6));
+	printf("----------\n");
+	printf("ft_strcpy : \n");
+	printf("%s\n", ft_strcpy(str6, str7));
+	printf("strcpy : \n");
+	printf("%s\n", strcpy(str6, str7));
+	printf("----------\n");
+	printf("ft_strcpy : \n");
+	printf("%s\n", ft_strcpy(str7, str4));
+	printf("strcpy : \n");
+	printf("%s\n", strcpy(str7, str4));
+}
+
 int     main(void)
 {
-	ft_main_strlen();
-	// ft_main_strcpy();
+	// ft_main_strlen();
+	ft_main_strcpy();
 	// ft_main_strcmp();
     // ft_main_strdup();
     // ft_main_write();

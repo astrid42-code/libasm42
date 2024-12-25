@@ -8,18 +8,18 @@ ft_strlen:
     mov rbp, rsp        ; copy rsp value in stack ptr (both point to the top of the stack now)
     xor rcx, rcx		; initialize loop counter to 0
 
-; loop while (s[i])
+; loop : while (s[i])
 
-_loop:
+loop:
     cmp [rdi], byte 0	; compare rdi (str[i] address) to null ptr (end of str)
-    jz _end				; if null ptr = end of loop, jump to _end section and return
+    jz end				; if null ptr = end of loop, jump to _end section and return
     inc rcx 			; increase loop counter  (i++;)
     inc rdi				; increase dest address
-    jmp _loop			; retour au départ de la loop
+    jmp loop			; retour au départ de la loop
 
 ; end section, returns the final value
 
-_end:
+end:
     mov rax, rcx		; move rcx value in rax (register used for the values we return)
     pop rbp				; pop the return address off the stack and jump unconditionally to this address
 	ret
