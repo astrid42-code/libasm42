@@ -1,7 +1,7 @@
 NAME		=	libasm.a
 
-SRCS		=	ft_strlen.s ft_strcpy.s 
-# ft_strcmp.s ft_strdup.s ft_write.s ft_read.s
+SRCS		=	ft_strlen.s ft_strcpy.s ft_strcmp.s
+#  ft_strdup.s ft_write.s ft_read.s
 
 #BONUS		=	
 
@@ -30,7 +30,7 @@ $(NAME):	${OBJS}
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS} 
+			${RM} ${OBJS} a.out
 			#${OBJSBONUS}
 
 fclean:		clean

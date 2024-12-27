@@ -22,6 +22,19 @@ r9 registre g´en´eral
 r15 registre g´en´eral
 rip compteur de programme (instruction pointer)
 
+Segmentation de la m´emoire
+La m´emoire est divis´ee en segments ind´ependants.
+L’adresse de d´ebut de chaque segment est stock´ee dans un
+registre.
+Chaque segment contient un type particulier de donn´ees.
+le segment de donn´ees permet de stocker les variables globales et
+les constantes. La taille de ce segment n’´evolue pas au cours de
+l’ex´ecution du programme (il est statique).
+le segment de code permet de stocker les instructions qui
+composent le programme
+la pile permet de stocker les variables locales, param`etres de
+fonctions et certains r´esultats interm´ediares de calcul
+https://pageperso.lis-lab.fr/alexis.nasr/Ens/Compilation/cm06_x86.pdf
 
 instruction loop :
 Cette instruction de boucle permet de décrémenter le registre CX (compteur de boucle) de 1

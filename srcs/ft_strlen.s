@@ -1,3 +1,8 @@
+; .text = Instructions qui composent le programme
+; Elle est constitu´ee de lignes de la forme
+; [´etiquette] nom d instruction [op´erandes]
+; les parties entre crochets sont optionnelles
+
 section .text
 	global ft_strlen
 
