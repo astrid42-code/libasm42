@@ -6,7 +6,7 @@
 /*   By: asgaulti <asgaulti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:30:32 by asgaulti          #+#    #+#             */
-/*   Updated: 2024/12/25 17:58:13 by asgaulti         ###   ########.fr       */
+/*   Updated: 2024/12/27 16:19:01 by asgaulti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,9 @@ void		ft_main_strcpy(void)
 	printf("%s\n", strcpy(str1, str2));
 	printf("----------\n");
 	printf("ft_strcpy : \n");
-	printf("%s\n", ft_strcpy(str3, str4));
+	printf("%s\n", ft_strcpy(str4, str3));
 	printf("strcpy : \n");
-	printf("%s\n", strcpy(str3, str4));
+	printf("%s\n", strcpy(str4, str3));
 	printf("----------\n");
 	printf("ft_strcpy : \n");
 	printf("%s\n", ft_strcpy(str5, str6));
