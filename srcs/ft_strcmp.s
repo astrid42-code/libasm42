@@ -8,19 +8,19 @@ ft_strcmp:
 
 loop:
     cmp [rdi], byte 0
-    je end  ; jump equal (if str[i] is null)
+    je end  ; jump equal (if str1[i] is null)
     cmp [rsi], byte 0
-    je end ; jump equal (if str[i] is null)
+    je end ; jump equal (if str2[i] is null)
 
     mov al, [rdi] ; load str1[i] in sub register al
 	cmp al, [rsi] ; compare str1[i] to str2[i]
-    jne end ; jump not equal
+    jne end ; if str1[i] and str2[i] not equal, jump to end
     inc rdi
     inc rsi
     jmp loop
 
 end:
-    sub rax, [rsi]
+    sub rax, [rsi] ; substract char str2[i] to rax (0)
 	jl neg ; jump to less fct (neg)
 	jg pos ; jump to greater fct (pos)
 	jmp eq ; jump to equal str fct (eq)
