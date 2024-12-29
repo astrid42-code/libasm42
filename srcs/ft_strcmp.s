@@ -24,7 +24,7 @@ loop:
     jmp loop
 
 cmp:
-    sub rax, [rsi] ; substract char str2[i] to rax (0)
+    sub al, [rsi] ; substract char str2[i] to rax (0)
 	jl neg ; jump to less fct (neg)
 	jg pos ; jump to greater fct (pos)
 	jmp eq ; jump to equal str fct (eq)

@@ -6,7 +6,7 @@
 /*   By: asgaulti <asgaulti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:30:32 by asgaulti          #+#    #+#             */
-/*   Updated: 2024/12/29 15:04:14 by asgaulti         ###   ########.fr       */
+/*   Updated: 2024/12/29 15:53:54 by asgaulti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,11 @@ void		ft_main_strcmp(void)
 	printf("%d\n", ft_strcmp("1", "1"));
 	printf("strcmp : \n");
 	printf("%d\n", strcmp("1", "1"));
+	printf("----------\n");
+	printf("ft_strcmp : 1 / -1 (greater) \n");
+	printf("%d\n", ft_strcmp("1", "-1"));
+	printf("strcmp : \n");
+	printf("%d\n", strcmp("1", "-1"));
 	printf("----------\n");
 	printf("ft_strcmp : less \n");
 	printf("%d\n", ft_strcmp("", "coucou"));
