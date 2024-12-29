@@ -6,7 +6,7 @@
 /*   By: asgaulti <asgaulti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:30:32 by asgaulti          #+#    #+#             */
-/*   Updated: 2024/12/27 16:36:26 by asgaulti         ###   ########.fr       */
+/*   Updated: 2024/12/29 15:04:14 by asgaulti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,27 +100,32 @@ void		ft_main_strcpy(void)
 void		ft_main_strcmp(void)
 {
 	printf("-------------------ft_strcmp-------------------\n");
-	printf("ft_strcmp : \n");
+	printf("ft_strcmp : 1 \n");
+	printf("%d\n", ft_strcmp("1", "1"));
+	printf("strcmp : \n");
+	printf("%d\n", strcmp("1", "1"));
+	printf("----------\n");
+	printf("ft_strcmp : less \n");
 	printf("%d\n", ft_strcmp("", "coucou"));
 	printf("strcmp : \n");
 	printf("%d\n", strcmp("", "coucou"));
 	printf("----------\n");
-	printf("ft_strcmp : \n");
+	printf("ft_strcmp : greater \n");
 	printf("%d\n", ft_strcmp("lol", "coucou"));
 	printf("strcmp : \n");
 	printf("%d\n", strcmp("lol", "coucou"));
 	printf("----------\n");
-	printf("ft_strcmp : \n");
-	printf("%d\n", ft_strcmp("hohohoho", "coucou"));
+	printf("ft_strcmp : greater\n");
+	printf("%d\n", ft_strcmp("hohohoho", ""));
 	printf("strcmp : \n");
-	printf("%d\n", strcmp("hohohoho", "coucou"));
+	printf("%d\n", strcmp("hohohoho", ""));
 	printf("----------\n");
 	printf("ft_strcmp : \n");
-	printf("%d\n", ft_strcmp("", "bonjour"));
-	printf("strcmp : \n");
-	printf("%d\n", strcmp("", "bonjour"));
+	printf("%d\n", ft_strcmp("bonjou", "bonjour"));
+	printf("strcmp : less\n");
+	printf("%d\n", strcmp("bonjou", "bonjour"));
 	printf("----------\n");
-	printf("ft_strcmp : \n");
+	printf("ft_strcmp : equal\n");
 	printf("%d\n", ft_strcmp("bonjour", "bonjour"));
 	printf("strcmp : \n");
 	printf("%d\n", strcmp("bonjour", "bonjour"));
