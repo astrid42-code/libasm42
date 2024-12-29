@@ -6,7 +6,7 @@
 /*   By: asgaulti <asgaulti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:30:32 by asgaulti          #+#    #+#             */
-/*   Updated: 2024/12/29 16:12:10 by asgaulti         ###   ########.fr       */
+/*   Updated: 2024/12/29 16:53:19 by asgaulti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,30 +176,30 @@ void		ft_main_write(void)
 	printf("\nreturn = %zd\n", ft_write(1, NULL, 9));
  	printf("errno : %d\n", errno);
 	errno = 0;
- 	printf("write : \n");
-	printf("\nreturn = %zd\n", write(1, NULL, 9));
- 	printf("errno : %d\n", errno);
-	printf("----------\n");
-	printf("ft_write : \n");
-	printf("\nreturn = %zd\n", ft_write(-1, "test", 5));
- 	printf("errno : %d\n", errno);
-	errno = 0;
- 	printf("write : \n");
-	printf("\nreturn = %zd\n", write(-1, "test", 5));
- 	printf("errno : %d\n", errno);
-	printf("----------\n");
-	printf("ft_write : \n");
-	printf("\nreturn = %zd\n", ft_write(tmp[1], NULL, 5));
- 	printf("errno : %d\n", errno);
-	errno = 0;
- 	printf("write : \n");
-	printf("\nreturn = %zd\n", write(tmp[1], NULL, 5));
- 	printf("errno : %d\n", errno);
-	printf("----------\n");
-	printf("ft_write : \n");
-	printf("\nreturn = %zd\n", ft_write(-1, "tt", 2));
- 	printf("errno : %d\n", errno);
-	errno = 0;
+ 	// printf("write : \n");
+	// printf("\nreturn = %zd\n", write(1, NULL, 9));
+ 	// printf("errno : %d\n", errno);
+	// printf("----------\n");
+	// printf("ft_write : \n");
+	// printf("\nreturn = %zd\n", ft_write(-1, "test", 5));
+ 	// printf("errno : %d\n", errno);
+	// errno = 0;
+ 	// printf("write : \n");
+	// printf("\nreturn = %zd\n", write(-1, "test", 5));
+ 	// printf("errno : %d\n", errno);
+	// printf("----------\n");
+	// printf("ft_write : \n");
+	// printf("\nreturn = %zd\n", ft_write(tmp[1], NULL, 5));
+ 	// printf("errno : %d\n", errno);
+	// errno = 0;
+ 	// printf("write : \n");
+	// printf("\nreturn = %zd\n", write(tmp[1], NULL, 5));
+ 	// printf("errno : %d\n", errno);
+	// printf("----------\n");
+	// printf("ft_write : \n");
+	// printf("\nreturn = %zd\n", ft_write(-1, "tt", 2));
+ 	// printf("errno : %d\n", errno);
+	// errno = 0;
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(-1, "tt", 2));
  	printf("errno : %d\n", errno);
