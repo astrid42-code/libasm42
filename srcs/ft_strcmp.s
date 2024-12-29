@@ -8,7 +8,7 @@ ft_strcmp:
 
 loop:
 
-    mov al, [rdi] ; load str1[i] in sub register al
+    mov al, [rdi] ; load str1[i] in sub register al (related to rax)
 	cmp al, [rsi] ; compare str1[i] to str2[i]
     jne cmp ; if str1[i] and str2[i] not equal, jump to cmp
 

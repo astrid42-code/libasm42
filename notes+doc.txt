@@ -42,6 +42,11 @@ et par la suite de donner le contrôle à une étiquette destinataire tant que l
 https://www.gladir.com/LEXIQUE/ASM/loop.htm
 
 
+registres, sous registres, ...:
+https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
+https://www.philadelphia.edu.jo/academics/qhamarsheh/uploads/Lecture%2018%20Conditional%20Jumps%20Instructions.pdf
+
+
 exempl d'explications IA
 >
 section .text
