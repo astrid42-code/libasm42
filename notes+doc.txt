@@ -4,6 +4,10 @@ a.out ne disparait pas apres make fclean
 rbp / rsp a revoir
 
 
+explications generales completes :
+https://medium.com/@leogaudin/libasm-a-guide-to-get-familiar-with-assembly-in-42-830f619f4c5e
+
+
 http://www.lacl.fr/tan/asm
 Intro 
 Registres Instructions Structures de contrˆole Tableaux Sous programmes Flottants

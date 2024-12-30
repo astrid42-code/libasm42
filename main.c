@@ -6,7 +6,7 @@
 /*   By: asgaulti <asgaulti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:30:32 by asgaulti          #+#    #+#             */
-/*   Updated: 2024/12/30 15:40:20 by asgaulti         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:22:02 by asgaulti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,7 @@ void		ft_main_strcmp(void)
 void		ft_main_write(void)
 {
 	int tmp[2];
-	errno = 0;
+
 	printf("-------------------ft_write-------------------\n");
  	printf("ft_write : 0, coucou, 6\n");
 	printf("\nreturn = %zd\n", ft_write(0, "coucou", 6));
@@ -165,12 +165,12 @@ void		ft_main_write(void)
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(1, "yeslolol", 9));
 	printf("----------\n");
-	printf("ft_write : 300, yeslolol, 9\n");
-	printf("\nreturn = %zd\n", ft_write(300, "yeslolol", 9));
+	printf("ft_write : 100, yeslolol, 9\n");
+	printf("\nreturn = %zd\n", ft_write(100, "yeslolol", 9));
  	printf("errno : %d\n", errno);
 	printf("write : \n");
 	errno = 0;
-	printf("\nreturn = %zd\n", write(300, "yeslolol", 9));
+	printf("\nreturn = %zd\n", write(100, "yeslolol", 9));
  	printf("errno : %d\n", errno);
 	printf("----------\n");
 	printf("ft_write : -1, test, 5\n");
