@@ -6,7 +6,7 @@
 /*   By: asgaulti <asgaulti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:30:32 by asgaulti          #+#    #+#             */
-/*   Updated: 2024/12/29 16:53:19 by asgaulti         ###   ########.fr       */
+/*   Updated: 2024/12/30 15:40:20 by asgaulti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,28 +143,29 @@ void		ft_main_strcmp(void)
 void		ft_main_write(void)
 {
 	int tmp[2];
+	errno = 0;
 	printf("-------------------ft_write-------------------\n");
- 	printf("ft_write : \n");
+ 	printf("ft_write : 0, coucou, 6\n");
 	printf("\nreturn = %zd\n", ft_write(0, "coucou", 6));
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(0, "coucou", 6));
 	printf("----------\n");
-	printf("ft_write : \n");
+	printf("ft_write : 0, test, 2\n");
 	printf("\nreturn = %zd\n", ft_write(0, "test", 2));
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(0, "test", 2));
 	printf("----------\n");
-	printf("ft_write : \n");
+	printf("ft_write : 0, test, 1\n");
 	printf("\nreturn = %zd\n", ft_write(0, "test", 1));
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(0, "test", 1));
 	printf("----------\n");
-	printf("ft_write : \n");
+	printf("ft_write : 1, yeslolol, 9\n");
 	printf("\nreturn = %zd\n", ft_write(1, "yeslolol", 9));
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(1, "yeslolol", 9));
 	printf("----------\n");
-	printf("ft_write : \n");
+	printf("ft_write : 300, yeslolol, 9\n");
 	printf("\nreturn = %zd\n", ft_write(300, "yeslolol", 9));
  	printf("errno : %d\n", errno);
 	printf("write : \n");
@@ -172,39 +173,23 @@ void		ft_main_write(void)
 	printf("\nreturn = %zd\n", write(300, "yeslolol", 9));
  	printf("errno : %d\n", errno);
 	printf("----------\n");
-	printf("ft_write : \n");
-	printf("\nreturn = %zd\n", ft_write(1, NULL, 9));
+	printf("ft_write : -1, test, 5\n");
+	printf("\nreturn = %zd\n", ft_write(-1, "test", 5));
  	printf("errno : %d\n", errno);
 	errno = 0;
- 	// printf("write : \n");
-	// printf("\nreturn = %zd\n", write(1, NULL, 9));
- 	// printf("errno : %d\n", errno);
-	// printf("----------\n");
-	// printf("ft_write : \n");
-	// printf("\nreturn = %zd\n", ft_write(-1, "test", 5));
- 	// printf("errno : %d\n", errno);
-	// errno = 0;
- 	// printf("write : \n");
-	// printf("\nreturn = %zd\n", write(-1, "test", 5));
- 	// printf("errno : %d\n", errno);
-	// printf("----------\n");
-	// printf("ft_write : \n");
-	// printf("\nreturn = %zd\n", ft_write(tmp[1], NULL, 5));
- 	// printf("errno : %d\n", errno);
-	// errno = 0;
- 	// printf("write : \n");
-	// printf("\nreturn = %zd\n", write(tmp[1], NULL, 5));
- 	// printf("errno : %d\n", errno);
-	// printf("----------\n");
-	// printf("ft_write : \n");
-	// printf("\nreturn = %zd\n", ft_write(-1, "tt", 2));
- 	// printf("errno : %d\n", errno);
-	// errno = 0;
+ 	printf("write : \n");
+	printf("\nreturn = %zd\n", write(-1, "test", 5));
+ 	printf("errno : %d\n", errno);
+	printf("----------\n");
+	printf("ft_write : -1, tt, 2\n");
+	printf("\nreturn = %zd\n", ft_write(-1, "tt", 2));
+ 	printf("errno : %d\n", errno);
+	errno = 0;
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(-1, "tt", 2));
  	printf("errno : %d\n", errno);
 	printf("----------\n");
-	printf("ft_write : \n");
+	printf("ft_write : OPEN_MAX + 1, tt, 2\n");
 	printf("\nreturn = %zd\n", ft_write(OPEN_MAX + 1, "tt", 2));
  	printf("errno : %d\n", errno);
 	errno = 0;

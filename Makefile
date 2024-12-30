@@ -1,6 +1,6 @@
 NAME		=	libasm.a
 
-SRCS		=	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_write_copy.s
+SRCS		=	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s
 #  ft_strdup.s ft_read.s
 
 #BONUS		=	
