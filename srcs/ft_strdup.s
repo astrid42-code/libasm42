@@ -7,6 +7,8 @@ section .text
 ft_strdup:
     push rbp
     mov rbp, rsp
+    cmp [rsi], byte 0	; compare rsi (source address) to null ptr (end of str)
+    jz end				; if null ptr = end of loop, jump to _end section and return
 
 
 end:

@@ -256,10 +256,10 @@ void		ft_main_read(void)
 	printf("buf: %s, ret = %zd\n", buf_read, ret);
 	close(fd);
 	errno = 0;
-	printf("read : \n");
-	ret = read(tmp[0], NULL, 2);
- 	printf("errno : %d\n", errno);
-	printf("buf: %s, ret = %zd\n", buf_read, ret);
+	// printf("read : \n");
+	// ret = read(tmp[0], NULL, 2);
+ 	// printf("errno : %d\n", errno);
+	// printf("buf: %s, ret = %zd\n", buf_read, ret);
 	printf("----------\n");
 	printf("ft_read : \n");
     	ret = ft_read(OPEN_MAX + 1, buf_read, 2);
@@ -273,14 +273,63 @@ void		ft_main_read(void)
 	printf("buf: %s, ret = %zd\n", buf_read, ret);
 }
 
+void		ft_main_strdup(void)
+{
+	printf("-------------------ft_strdup-------------------\n");
+    	printf("ft_strdup : \n");
+	printf("%s\n", ft_strdup("test12345"));
+    	printf("strdup : \n");
+	printf("%s\n", strdup("test12345"));
+	printf("----------\n");
+    	printf("ft_strdup : \n");
+	printf("%s\n", ft_strdup("a"));
+    	printf("strdup : \n");
+	printf("%s\n", strdup("a"));
+	printf("----------\n");
+    	printf("ft_strdup : \n");
+	printf("%s\n", ft_strdup("test"));
+    	printf("strdup : \n");
+	printf("%s\n", strdup("test"));
+	printf("----------\n");
+	// printf("ft_strdup : \n");
+	// printf("%s\n", ft_strdup(""));
+    // 	printf("strdup : \n");
+	// printf("%s\n", strdup(""));
+	printf("----------\n");
+	printf("ft_strdup : \n");
+	printf("%s\n", ft_strdup("\n"));
+    	printf("strdup : \n");
+	printf("%s\n", strdup("\n"));
+	printf("----------\n");
+	printf("ft_strdup : \n");
+	printf("%s\n", ft_strdup("abc"));
+    	printf("strdup : \n");
+	printf("%s\n", strdup("abc"));
+	printf("----------\n");
+	printf("ft_strdup : \n");
+	printf("%s\n", ft_strdup("asl;fjl;asdjfjkasdl;fjadjsf"));
+    	printf("strdup : \n");
+	printf("%s\n", strdup("asl;fjl;asdjfjkasdl;fjadjsf"));
+	printf("----------\n");
+	printf("ft_strdup : \n");
+	printf("%s\n", ft_strdup("yope\0la"));
+    	printf("strdup : \n");
+	printf("%s\n", strdup("yope\0la"));
+	printf("----------\n");
+	printf("ft_strdup : \n");
+	printf("%s\n", ft_strdup("Lorem ipsum dolor sit amet, consectetur adipiscingelit. Sed in malesuada purus. Etiam a scelerisque massa. Ut non euismod elit. Aliquambibendum dolor mi, id fringilla tellus pulvinar eu. Fusce vel fermentum sem. Crasvolutpat, eros eget rhoncus rhoncus, diam augue egestas dolor, vitae rutrum nisifelis sed purus. Mauris magna ex, mollis non suscipit eu, lacinia ac turpis. Phasellusac tortor et lectus fermentum lobortis eu at mauris. Vestibulum sit amet posueretortor, sit amet consequat amet."));
+    	printf("strdup : \n");
+	printf("%s\n", strdup("Lorem ipsum dolor sit amet, consectetur adipiscingelit. Sed in malesuada purus. Etiam a scelerisque massa. Ut non euismod elit. Aliquambibendum dolor mi, id fringilla tellus pulvinar eu. Fusce vel fermentum sem. Crasvolutpat, eros eget rhoncus rhoncus, diam augue egestas dolor, vitae rutrum nisifelis sed purus. Mauris magna ex, mollis non suscipit eu, lacinia ac turpis. Phasellusac tortor et lectus fermentum lobortis eu at mauris. Vestibulum sit amet posueretortor, sit amet consequat amet."));
+}
+
 
 int     main(void)
 {
 	// ft_main_strlen();
 	// ft_main_strcpy();
 	// ft_main_strcmp();
-    // ft_main_strdup();
+    ft_main_strdup();
     // ft_main_write();
-    ft_main_read();
+    // ft_main_read();
     return (0);
 }
