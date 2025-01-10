@@ -310,11 +310,11 @@ void		ft_main_strdup(void)
 
 int     main(void)
 {
-	// ft_main_strlen();
-	// ft_main_strcpy();
-	// ft_main_strcmp();
+	ft_main_strlen();
+	ft_main_strcpy();
+	ft_main_strcmp();
+    ft_main_write();
+    ft_main_read();
     ft_main_strdup();
-    // ft_main_write();
-    // ft_main_read();
     return (0);
 }
