@@ -18,3 +18,5 @@ loop:
 end:
     pop rbp
     ret
+
+; plante sur str longue, a revoir
