@@ -70,6 +70,7 @@ void		ft_main_strcpy(void)
 	char	str5[] = "";
 	char	str6[] = "42";
 	char	str7[] = "libasm";
+	char 	str8[] = "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh..........................fffffffffffffffff";
 	printf("-------------------ft_strcpy-------------------\n");
 	printf("ft_strcpy : \n");
 	printf("%s\n", ft_strcpy(str1, str2));
@@ -95,6 +96,16 @@ void		ft_main_strcpy(void)
 	printf("%s\n", ft_strcpy(str7, str4));
 	printf("strcpy : \n");
 	printf("%s\n", strcpy(str7, str4));
+	printf("----------\n");
+	printf("ft_strcpy : \n");
+	printf("%s\n", ft_strcpy(str6, str8));
+	printf("strcpy : \n");
+	printf("%s\n", strcpy(str6, str8));
+	printf("----------\n");
+	printf("ft_strcpy : \n");
+	printf("%s\n", ft_strcpy(str8, str4));
+	printf("strcpy : \n");
+	printf("%s\n", strcpy(str8, str4));
 }
 
 void		ft_main_strcmp(void)
@@ -310,11 +321,11 @@ void		ft_main_strdup(void)
 
 int     main(void)
 {
-	ft_main_strlen();
+	// ft_main_strlen();
 	ft_main_strcpy();
-	ft_main_strcmp();
-    ft_main_write();
-    ft_main_read();
+	// ft_main_strcmp();
+    // ft_main_write();
+    // ft_main_read();
     ft_main_strdup();
     return (0);
 }

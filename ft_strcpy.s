@@ -9,14 +9,14 @@ ft_strcpy:
 loop:
     cmp [rsi], byte 0	; compare rsi (source address) to null ptr (end of str)
     jz end				; if null ptr = end of loop, jump to _end section and return
-    ; movsb = copy directly the whole string
+;    movsb               ; = copy directly the whole string
+;    jmp loop
     mov rax, rsi
     mov rdi, rax
     inc rdi
     inc rsi
 
 end:
+;    mov byte [rdi], 0
     pop rbp
     ret
-
-; plante sur str longue, a revoir
