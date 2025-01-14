@@ -326,6 +326,6 @@ int     main(void)
 	// ft_main_strcmp();
     // ft_main_write();
     // ft_main_read();
-    ft_main_strdup();
+    // ft_main_strdup();
     return (0);
 }

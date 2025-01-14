@@ -2,21 +2,19 @@ section .text
     global ft_strcpy
 
 ft_strcpy:
-    push rbp
-    mov rbp, rsp
-    mov rax, rdi  ; move dest address in return register (rax)
+    xor rax, rax
+    xor rcx, rcx
 
 loop:
-    cmp [rsi], byte 0	; compare rsi (source address) to null ptr (end of str)
-    jz end				; if null ptr = end of loop, jump to _end section and return
-;    movsb               ; = copy directly the whole string
-;    jmp loop
-    mov rax, rsi
-    mov rdi, rax
-    inc rdi
-    inc rsi
+;    cmp [rsi + rcx], byte 0
+;    je end
+    mov al, byte[rsi + rcx]  ; save char of rsi (src str[i]) in subregister al (related to rax)
+    mov byte[rdi + rcx], al
+    inc rcx
+    cmp al, 0
+    jne loop
 
 end:
-;    mov byte [rdi], 0
-    pop rbp
+;    mov	[rdi + rcx], byte 0
+    mov rax, rdi    ; save dest (rdi) in rax
     ret
