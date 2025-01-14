@@ -70,7 +70,7 @@ void		ft_main_strcpy(void)
 	char	str5[] = "";
 	char	str6[] = "42";
 	char	str7[] = "libasm";
-	char 	str8[] = "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh..........................fffffffffffffffff";
+	char 	str8[] = "hhhhhhhhhhhhhhhhh..................fffffffffffffff";
 	printf("-------------------ft_strcpy-------------------\n");
 	printf("ft_strcpy : \n");
 	printf("%s\n", ft_strcpy(str1, str2));
@@ -326,6 +326,6 @@ int     main(void)
 	// ft_main_strcmp();
     // ft_main_write();
     // ft_main_read();
-    // ft_main_strdup();
+    ft_main_strdup();
     return (0);
 }

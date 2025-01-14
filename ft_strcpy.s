@@ -6,8 +6,6 @@ ft_strcpy:
     xor rcx, rcx
 
 loop:
-;    cmp [rsi + rcx], byte 0
-;    je end
     mov al, byte[rsi + rcx]  ; save char of rsi (src str[i]) in subregister al (related to rax)
     mov byte[rdi + rcx], al
     inc rcx
@@ -15,6 +13,9 @@ loop:
     jne loop
 
 end:
-;    mov	[rdi + rcx], byte 0
     mov rax, rdi    ; save dest (rdi) in rax
     ret
+
+; about diff for copy :
+; real "strcpy has no way of knowing how large the destination buffer is (i.e. there is no length parameter) so sloppy programming using it can lead to overrunning the buffer and corrupting other memory. Such an overrun can lead to crashes, odd behaviour and may be exploitable by malware authors."
+; https://stackoverflow.com/questions/23317646/why-is-strcpy-unsafe-in-c
