@@ -1,8 +1,3 @@
-; .text = Instructions qui composent le programme
-; Elle est constitu´ee de lignes de la forme
-; [´etiquette] nom d instruction [op´erandes]
-; les parties entre crochets sont optionnelles
-
 section .text
 	global ft_strlen
 
@@ -20,7 +15,7 @@ loop:
     jz end				; if null ptr = end of loop, jump to _end section and return
     inc rcx 			; increase loop counter  (i++;)
     inc rdi				; increase dest address
-    jmp loop			; retour au départ de la loop
+    jmp loop
 
 ; end section, returns the final value
 

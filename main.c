@@ -65,12 +65,12 @@ void		ft_main_strcpy(void)
 {
 	char	str1[] = "Hello";
 	char	str2[] = "world";
-	char	str3[] = "wesh";
+	char	str3[] = "123";
 	char	str4[] = " ";
 	char	str5[] = "";
 	char	str6[] = "42";
 	char	str7[] = "libasm";
-	char 	str8[] = "hhhhhhhhhhhhhhhhh..................fffffffffffffff";
+	char	str8[] = "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh";
 	printf("-------------------ft_strcpy-------------------\n");
 	printf("ft_strcpy : \n");
 	printf("%s\n", ft_strcpy(str1, str2));
@@ -171,17 +171,17 @@ void		ft_main_write(void)
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(0, "test", 1));
 	printf("----------\n");
-	printf("ft_write : 1, yeslolol, 9\n");
-	printf("\nreturn = %zd\n", ft_write(1, "yeslolol", 9));
+	printf("ft_write : 1, jrufnsc2, 9\n");
+	printf("\nreturn = %zd\n", ft_write(1, "jrufnsc2", 9));
  	printf("write : \n");
-	printf("\nreturn = %zd\n", write(1, "yeslolol", 9));
+	printf("\nreturn = %zd\n", write(1, "jrufnsc2", 9));
 	printf("----------\n");
-	printf("ft_write : 100, yeslolol, 9\n");
-	printf("\nreturn = %zd\n", ft_write(100, "yeslolol", 9));
+	printf("ft_write : 100, jrufnsc2, 9\n");
+	printf("\nreturn = %zd\n", ft_write(100, "jrufnsc2", 9));
  	printf("errno : %d\n", errno);
 	printf("write : \n");
 	errno = 0;
-	printf("\nreturn = %zd\n", write(100, "yeslolol", 9));
+	printf("\nreturn = %zd\n", write(100, "jrufnsc2", 9));
  	printf("errno : %d\n", errno);
 	printf("----------\n");
 	printf("ft_write : -1, test, 5\n");
@@ -207,6 +207,11 @@ void		ft_main_write(void)
  	printf("write : \n");
 	printf("\nreturn = %zd\n", write(OPEN_MAX + 1, "tt", 2));
  	printf("errno : %d\n", errno);
+	printf("----------\n");
+	printf("ft_write : 0, test, 2\n");
+	printf("\nreturn = %zd\n", ft_write(0, NULL, 0));
+ 	printf("write : \n");
+	printf("\nreturn = %zd\n", write(0, NULL, 0));
 }
 
 void		ft_main_read(void)
@@ -321,11 +326,11 @@ void		ft_main_strdup(void)
 
 int     main(void)
 {
-	// ft_main_strlen();
+	ft_main_strlen();
 	ft_main_strcpy();
-	// ft_main_strcmp();
-    // ft_main_write();
-    // ft_main_read();
+	ft_main_strcmp();
+    ft_main_write();
+    ft_main_read();
     ft_main_strdup();
     return (0);
 }

@@ -5,25 +5,16 @@ section .text
 		extern malloc
 
 ft_strdup:
-	mov r12, rdi ; copier str (rdi) dans r12 (callee-saved register)
-	call ft_strlen ; rax = len de str (rsi)
-	inc rax ; +1 pour le \0
-	mov rdi, rax ; pour envoyer la taille à malloc
+	mov r12, rdi 			; copy str (rdi) in r12 (callee-saved register)
+	call ft_strlen 			; rax = len of str (rsi)
+	inc rax 				; +1 for \0
+	mov rdi, rax 			; send lenght to malloc
 	call malloc wrt ..plt
-	cmp rax, 0 ; si 0, malloc failed
+	cmp rax, 0 				; if 0, malloc failed
 	jz error
-	mov rdi, rax ; malloc le 1er param de cpy
-	mov rsi, r12 ; str remis dans rsi (2eme param de cpy)
-	call ft_strcpy ; effectue la copie de rsi vers rdi
-	
-;	call ft_strlen ; rax = len de str (rsi)
-;    inc rax ; +1 pour le \0
-;    push rdi
-;	mov rdi, rax ; pour envoyer la taille à malloc
-;	call malloc wrt ..plt
-;	pop rdi
-;    mov rsi, rdi
-;    mov rdi, rax
+	mov rdi, rax 			; malloc 1st param of cpy
+	mov rsi, r12 			; str back in rsi (2nd param of cpy)
+	call ft_strcpy 			; copy of rsi in rdi
 	ret
 
 error:

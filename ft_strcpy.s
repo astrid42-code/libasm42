@@ -1,21 +1,18 @@
-section .text
-    global ft_strcpy
+section		.text
+    global		ft_strcpy
 
 ft_strcpy:
-    xor rax, rax
-    xor rcx, rcx
+	xor rcx, rcx
 
 loop:
-    mov al, byte[rsi + rcx]  ; save char of rsi (src str[i]) in subregister al (related to rax)
-    mov byte[rdi + rcx], al
+	cmp [rsi + rcx], byte 0
+    je end
+    mov al, byte[rsi + rcx]  ; using al subregister to avoid "invalid register size specification ignored [-w+regsize]" error
+    mov [rdi + rcx], byte al
     inc rcx
-    cmp al, 0
-    jne loop
+    jmp loop
 
 end:
-    mov rax, rdi    ; save dest (rdi) in rax
+	mov	[rdi + rcx], byte 0
+    mov rax, rdi
     ret
-
-; about diff for copy :
-; real "strcpy has no way of knowing how large the destination buffer is (i.e. there is no length parameter) so sloppy programming using it can lead to overrunning the buffer and corrupting other memory. Such an overrun can lead to crashes, odd behaviour and may be exploitable by malware authors."
-; https://stackoverflow.com/questions/23317646/why-is-strcpy-unsafe-in-c
