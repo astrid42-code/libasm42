@@ -3,6 +3,19 @@ https://medium.com/@leogaudin/libasm-a-guide-to-get-familiar-with-assembly-in-42
 https://pageperso.lis-lab.fr/alexis.nasr/Ens/Compilation/cm06_x86.pdf
 
 
+ajout main write (ecrire dans un fichier existant, a creer : test.txt):
+
+	int fichier = open("./test.txt", O_RDWR);
+	printf("%d", fichier);
+
+	printf("-------------------ft_write-------------------\n");
+	printf("ft_write : \n");
+	printf("\nreturn = %zd\n", ft_write(fichier, "coucou", 6));
+    printf("write : \n");
+	printf("\nreturn = %zd\n", write(fichier, "coucou", 6));
+
+
+
 http://www.lacl.fr/tan/asm
 Intro 
 Registres Instructions Structures de contrˆole Tableaux Sous programmes Flottants
