@@ -4,8 +4,6 @@ section .text
 ; variables initialization :
 
 ft_strlen:
-    push rbp            ; save base pointer on top of the stack = rsp (save local variables, for ex. : variables to use in a fct)
-    mov rbp, rsp        ; copy rsp value in stack ptr (both point to the top of the stack now)
     xor rcx, rcx		; initialize loop counter to 0
 
 ; loop : while (s[i])
@@ -21,5 +19,4 @@ loop:
 
 end:
     mov rax, rcx		; move rcx value in rax (register used for the values we return)
-    pop rbp				; pop the return address off the stack and jump unconditionally to this address
 	ret

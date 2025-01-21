@@ -2,8 +2,6 @@ section .text
 	global ft_strcmp
 
 ft_strcmp:
-	push rbp
-	mov rbp, rsp
     xor rax, rax ; set rax to 0
 
 loop:
@@ -41,5 +39,4 @@ eq:
     jmp end
 
 end:
-    pop rbp
     ret
